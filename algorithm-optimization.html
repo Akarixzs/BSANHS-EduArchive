@@ -1,0 +1,126 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>🖥️ algorithm optimization </title>
+
+<style>
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --bg-gradient: linear-gradient(135deg, #00416A, #E4E5E6);
+        --text-color: #ffffff;
+        --content-bg: rgba(255, 255, 255, 0.1);
+        --button-bg: #ffffff;
+        --button-text: #00416A;
+    }
+
+    body.dark-mode {
+        --bg-gradient: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        --text-color: #e4e4e4;
+        --content-bg: rgba(255, 255, 255, 0.05);
+        --button-bg: #203a43;
+        --button-text: #ffffff;
+    }
+
+    body {
+        font-family: "Poppins", sans-serif;
+        background: var(--bg-gradient);
+        color: var(--text-color);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 20px;
+        transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    .container {
+        max-width: 800px;
+        background: var(--content-bg);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(6px);
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .back-link {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        border-radius: 25px;
+        background: var(--button-bg);
+        color: var(--button-text);
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .back-link:hover {
+        opacity: 0.8;
+    }
+
+    .toggle-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: var(--button-bg);
+        color: var(--button-text);
+        border: none;
+        padding: 8px 16px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    .toggle-btn:hover {
+        opacity: 0.8;
+    }
+</style>
+</head>
+
+<body>
+    <button class="toggle-btn" id="toggle-theme">Dark Mode</button>
+
+    <div class="container">
+        <h1>🖥️ algorithm optimization</h1>
+        <p>
+           ...study purpose here... </p>
+
+        <p>
+            ...Study contributions here...
+        </p>
+
+        <a href="home.html" class="back-link">← Back to Main Page</a>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-theme');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toggleButton.textContent = body.classList.contains('dark-mode')
+                ? 'Light Mode'
+                : 'Dark Mode';
+        });
+    </script>
+</body>
+
+</html>
